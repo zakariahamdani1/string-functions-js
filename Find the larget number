@@ -1,0 +1,7 @@
+function largestOfAll(array) {
+  let result = [];
+  for(let x of array){
+    result.push(Math.max(...x));
+  }
+  return result;
+}
