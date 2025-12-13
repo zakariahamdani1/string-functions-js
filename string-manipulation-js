@@ -1,0 +1,12 @@
+function firstToTheLast(str){
+  let newStr;
+  if(str.length % 2 !== 0){
+    newStr = str + "X";
+  } else {
+    newStr = str;
+  }
+  let x = newStr.length / 2;
+  let sliced = newStr.slice(0,x);
+  let rest = newStr.slice(x);
+  return rest + sliced;
+}
