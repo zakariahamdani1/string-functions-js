@@ -1,0 +1,4 @@
+function filterFalsy(array){
+  let filterd = array.filter(num => Boolean(num)!==false)
+  return filterd;
+}
