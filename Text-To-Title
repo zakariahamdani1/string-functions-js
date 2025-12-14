@@ -1,0 +1,22 @@
+function textToTitle(str) {
+  let splited = str.split(" ");
+  let result = [];
+  let toupper = "";
+  let tolower = "";
+  for(let x of splited){
+    if (x.includes("'")) {
+      result.push(x);
+      continue;
+    }
+    for(let i = 0; i < x.length; i++){
+      if(i === 0){
+        toupper = x[i].toUpperCase();
+      } else {
+        tolower = x.slice(1).toLowerCase();
+      }
+    }
+    let joinUpLow = toupper + tolower;
+    result.push(joinUpLow);
+  }
+  return result.join(" ");
+}
