@@ -1,0 +1,18 @@
+function convertHTML(str) {
+  let obj = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };
+  let result = [];
+  for(let i of str){
+    if(i in obj){
+      result.push(obj[i]);
+    } else {
+      result.push(i);
+    }   
+  }
+  return result.join("");
+}
