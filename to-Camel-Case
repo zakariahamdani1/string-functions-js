@@ -1,0 +1,10 @@
+function toCamelCase(str){
+  let arr = [];
+  let splited = str.split("-").join(" ").split("_").join(" ");
+  let splited2 = splited.split(" ");
+  for(let i of splited2){
+    arr.push(i[0].toUpperCase() + i.slice(1));
+  }
+  arr[0] = splited2[0];
+  return arr.join("");
+}
